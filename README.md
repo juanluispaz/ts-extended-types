@@ -61,8 +61,8 @@ var localDateTime: LocalDateTime;
 - **`asInt(value: number) => int`**:  Cast the number provided by argument as `int`, throws an error if the provided number is not an integer.
 - **`roundToInt(value:  number) =>  int`**: Round the provided number to an integer and then cast it to `int`.
 - **`truncateToInt(value: number) => int`**: Truncate the provided number to an integer and then cast it to `int`.
-- **`floorToInt(value: number): int`**: Floor the provided number to an integer and then cast it to `int`.
-- **`ceilToInt(value: number): int`**: Ceil the provided number to an integer and then cast it to `int`.
+- **`floorToInt(value: number) => int`**: Floor the provided number to an integer and then cast it to `int`.
+- **`ceilToInt(value: number) => int`**: Ceil the provided number to an integer and then cast it to `int`.
 
 ### Provided stringInt functions
 
@@ -70,8 +70,8 @@ var localDateTime: LocalDateTime;
 - **`asStringInt(value: number|string) => stringInt`**:  Cast the number provided by argument as `stringInt`, throws an error if the provided number is not an integer.
 - **`roundToStringInt(value:  number) =>  stringInt`**: Round the provided number to an integer and then cast it to `stringInt`.
 - **`truncateToStringInt(value: number) => stringInt`**: Truncate the provided number to an integer and then cast it to `stringInt`.
-- **`floorToStringInt(value: number): stringInt`**: Floor the provided number to an integer and then cast it to `stringInt`.
-- **`ceilToStringInt(value: number): stringInt`**: Ceil the provided number to an integer and then cast it to `stringInt`.
+- **`floorToStringInt(value: number) => stringInt`**: Floor the provided number to an integer and then cast it to `stringInt`.
+- **`ceilToStringInt(value: number) => stringInt`**: Ceil the provided number to an integer and then cast it to `stringInt`.
 
 ### Provided double functions
 
@@ -87,22 +87,22 @@ var localDateTime: LocalDateTime;
 
 - **`createLocalDate() => LocalDate`**: create a new `LocalDate` with the current date.
 - **`createLocalDate(date: Date) => LocalDate`**: create a new `LocalDate` with the same date provided by argument.
-- **`createLocalDate(year: number, month: number, date: number): LocalDate`**:  create a new `LocalDate` with the year, month and date (day of the month) provided by arguments.
-- **`isLocalDate(value: any): value is LocalDate`**: Returns `true` if the value is a `LocalDate`, otherwise returns `false`
+- **`createLocalDate(year: number, month: number, date: number) => LocalDate`**:  create a new `LocalDate` with the year, month and date (day of the month) provided by arguments.
+- **`isLocalDate(value: any) => value is LocalDate`**: Returns `true` if the value is a `LocalDate`, otherwise returns `false`
 
 ### Provided LocalTime functions
 
 - **`createLocalTime() => LocalTime`**: create a new `LocalTime` with the current time.
 - **`createLocalTime(date: Date) => LocalTime`**: create a new `LocalTime` with the same time provided by argument.
-- **`createLocalTime(hours: number, minutes?: number, seconds?: number, milliseconds?: number): LocalTime`**:  create a new `LocalTime` with the hours, minutes, seconds and milliseconds provided by arguments.
-- **`isLocalTime(value: any): value is LocalTime`**: Returns `true` if the value is a `LocalTime`, otherwise returns `false`
+- **`createLocalTime(hours: number, minutes?: number, seconds?: number, milliseconds?: number) => LocalTime`**:  create a new `LocalTime` with the hours, minutes, seconds and milliseconds provided by arguments.
+- **`isLocalTime(value: any) => value is LocalTime`**: Returns `true` if the value is a `LocalTime`, otherwise returns `false`
 
 ### Provided LocalDateTime functions
 
 - **`createLocalDateTime() => LocalDateTime`**: create a new `LocalDate` with the current date and time.
 - **`createLocalDateTime(date: Date) => LocalDateTime`**: create a new `LocalDateTime` with the same date and time provided by argument.
-- **`createLocalDateTime(year: number, month: number, date: number, hours?: number, minutes?: number, seconds?: number, milliseconds?: number): LocalDateTime`**:  create a new `LocalDateTime` with the year, month, date (day of the month), hours, minutes, seconds and milliseconds provided by arguments.
-- **`isLocalDate(value: any): value is LocalDate`**: Returns `true` if the value is a `LocalDate`, otherwise returns `false`
+- **`createLocalDateTime(year: number, month: number, date: number, hours?: number, minutes?: number, seconds?: number, milliseconds?: number) => LocalDateTime`**:  create a new `LocalDateTime` with the year, month, date (day of the month), hours, minutes, seconds and milliseconds provided by arguments.
+- **`isLocalDate(value: any) => value is LocalDate`**: Returns `true` if the value is a `LocalDate`, otherwise returns `false`
 
 ## License
 
