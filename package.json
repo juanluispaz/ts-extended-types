@@ -1,6 +1,6 @@
 {
   "name": "ts-extended-types",
-  "version": "0.10.0",
+  "version": "1.0.0",
   "description": "Set of complementary basic types related to the ones provided by TypeScript to make your application even more type-safe",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
