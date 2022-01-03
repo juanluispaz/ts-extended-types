@@ -353,3 +353,34 @@ export function createLocalTime(hours?: number | Date, minutes: number = 0, seco
 export function isLocalTime(value: any): value is LocalTime {
     return value instanceof Date && (value as any).___type___ === 'LocalTime'
 }
+
+/**
+ * Type that represents an uuid string. It can be assigned to a string, but it cannot be assigned from a string.
+ */
+export type uuid = string & {
+    ___uuid___: never
+}
+
+const uuidRegex = /^([a-f0-9]{8}-[a-f0-9]{4}-[1-5][a-f0-9]{3}-[89ab][a-f0-9]{3}-[a-f0-9]{12}|00000000-0000-0000-0000-000000000000)$/i;
+
+/**
+ * Returns `true` if the value is a `uuid` string, otherwise returns `false`
+ * 
+ * @param value Value to verify if it is a `uuid`
+ */
+export function isUuid(value: any): value is uuid {
+    return typeof value === 'string' && uuidRegex.test(value)
+}
+
+/**
+ * Cast the string provided by argument as `uuid`, throws an error if the provided string is not a uuid
+ * 
+ * @param value String to be casted to `uuid`
+ */
+export function asUuid(value: string): uuid {
+    if (isUuid(value)) {
+        return value
+    } else {
+        throw new Error('Invalid uuid: ' + value)
+    }
+}

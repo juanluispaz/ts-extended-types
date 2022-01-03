@@ -18,7 +18,7 @@ $ npm install --save ts-extended-types
 ## Basic usage
 
 ```ts
-import {int, stringInt, double, stringDouble, LocalDate, LocalTime, LocalDateTime } from 'ts-extended-types';
+import {int, stringInt, double, stringDouble, LocalDate, LocalTime, LocalDateTime, uuid } from 'ts-extended-types';
 
 var intNumber: int;
 var veryBigInt: stringInt
@@ -27,6 +27,7 @@ var veryBigDoubleNumber: stringDouble
 var localDate: LocalDate;
 var localTime: LocalTime;
 var localDateTime: LocalDateTime;
+var uuidString: uuid;
 ```
 
 ## Type definitions
@@ -47,11 +48,13 @@ var localDateTime: LocalDateTime;
 	- **`getMilliseconds(): int`**: Gets the milliseconds
 - **`LocalDateTime`**: type that represents a local date with time (without timezone). **Provided methods**: all methods provided by `LocalDate` and `LocalTime` plus:
 	- **`getTime(): int`**: Gets the time value in milliseconds
+- **`uuid`**: type that represents an uuid string. It can be assigned to a string, but it cannot be assigned from a string.
 
 **Note**: 
-- In JavaScript `int`or `double` don't exists, all of these values as represented using a `number`.
-- In JavaScript `stringInt`or `stringDouble` don't exists, all of these values as represented using a `number` or a `string`.
+- In JavaScript `int` or `double` don't exists, all of these values are represented using a `number`.
+- In JavaScript `stringInt` or `stringDouble` don't exists, all of these values are represented using a `number` or a `string`.
 - In JavaScript `LocalDate`, `LocalTime` or `LocalDateTime` don't exists, all of these values are represented using the `Date` object.
+- In JavaScript `uuid` don't exists, this value is represented using a `string`.
 
 ## Provided functions
 
@@ -103,6 +106,11 @@ var localDateTime: LocalDateTime;
 - **`createLocalDateTime(date: Date) => LocalDateTime`**: create a new `LocalDateTime` with the same date and time provided by argument.
 - **`createLocalDateTime(year: number, month: number, date: number, hours?: number, minutes?: number, seconds?: number, milliseconds?: number) => LocalDateTime`**:  create a new `LocalDateTime` with the year, month, date (day of the month), hours, minutes, seconds and milliseconds provided by arguments.
 - **`isLocalDate(value: any) => value is LocalDate`**: Returns `true` if the value is a `LocalDate`, otherwise returns `false`
+
+### Provided uuid functions
+
+- **`isUuid(value: any) => value is uuid`**: Returns `true` if the value is an `uuid` string, otherwise returns `false`.
+- **`asUuid(value: string) => uuid`**: Cast the string provided by argument as `uuid`, throws an error if the provided string is not an uuid.
 
 ## License
 
